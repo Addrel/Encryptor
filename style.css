@@ -1,0 +1,135 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color:whitesmoke;
+}
+.inputData{
+    margin: 3em;
+    width: 50em;
+    height: 40em;
+    padding: 0.5em;
+}
+.buttons{
+    width: 100%;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.buttons input{
+    border: none;
+    border-radius: 10px;
+    width: 40%;
+    height: 90%;
+    margin: 2.5%;
+    font-size: 100%;
+}
+#textoIngresado{
+    background-color: whitesmoke;
+    color: orange;
+    resize: none;
+    height: 19em;
+    width: 95%;
+    font-size:2em;
+    padding: 0.5em;
+    border: none;
+}
+#textoIngresado::placeholder{
+    color: orange;
+}
+#textoIngresado:focus{
+    border: none;
+    overflow: hidden;
+    outline:none;
+}
+.encriptar{
+    background: orange;
+    color: whitesmoke; 
+}
+.desencriptar{
+    background: grey;
+    color: whitesmoke;
+}
+.mensaje{
+    background: white;
+    border: double 3px;
+    margin: 3em;
+    padding: 1em;
+    width: 18em;
+    height: 30em;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mensaje h2{
+    font-weight: bold;
+    font-size: larger;
+}
+.mensaje p{
+    color: gray;
+    font-size:small;
+}
+.mensaje img{
+    width: 70%;
+    height: auto;
+}
+.mensaje h3{
+    font-weight: bold;
+    font-size: larger;
+    color: orange;
+}
+.textMessage{
+    background: white;
+    border: double 3px;
+    margin: 3em;
+    padding: 1em;
+    width: 18em;
+    height: 30em;
+    border-radius: 10px;
+}
+.grid{
+    background: white;
+    border: double 3px;
+    margin: 3em;
+    padding: 1em;
+    width: 18em;
+    height: 30em;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 85% 15%;
+    grid-template-rows: 85% 15%;
+    border: solid 1px black;
+    gap: 0;
+}
+.grid p{
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+.grid button{
+    width: 100%;
+    height: 70%;
+    border: solid 1px;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin: 25% auto auto auto;
+}
+.grid button:hover{
+    background: whitesmoke;
+}
+.grid button:active{
+    background: silver;
+}
+.grid button img{
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
