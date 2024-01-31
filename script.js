@@ -23,7 +23,7 @@ function transformarTexto(){
             }
             ventana.classList.remove('mensaje');
             ventana.innerHTML=`<p id="clip">${valor}</p>
-            <button id="copiar"><img src="image2.png"></button>`;
+            <button id="copiar"><img src="images/image2.png"></button>`;
             ventana.classList.add('grid');
             const botonCopiar=document.querySelector("#copiar");
             botonCopiar.addEventListener('click',copiarTexto);
