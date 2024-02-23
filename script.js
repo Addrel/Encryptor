@@ -11,24 +11,39 @@ const clave={
     "o": "ober",
     "u": "ufat"
 };
+function verificar(texto){
+    let codigo;
+    for(let i=0;i<texto.length;i++){
+        codigo=texto.charCodeAt(i);
+        if((codigo<97||codigo>122)&&codigo!=32){
+            return false;
+        }
+    }
+    return true;
+}
 function transformarTexto(){
     let valor=texto.value;
     if(valor!=""){
-        for(const property in clave){
-            if(this.value=="Encriptar"){
-                valor=valor.replaceAll(property,clave[property]);
+        if(verificar(valor)){
+            for(const property in clave){
+                if(this.value=="Encriptar"){
+                    valor=valor.replaceAll(property,clave[property]);
+                }
+                else{
+                    valor=valor.replaceAll(clave[property],property);
+                }
+                ventana.classList.remove('mensaje');
+                ventana.innerHTML=`<p id="clip">${valor}</p>
+                <button id="copiar"><img src="images/image2.png"></button>`;
+                ventana.classList.add('grid');
+                const botonCopiar=document.querySelector("#copiar");
+                botonCopiar.addEventListener('click',copiarTexto);
             }
-            else{
-                valor=valor.replaceAll(clave[property],property);
-            }
-            ventana.classList.remove('mensaje');
-            ventana.innerHTML=`<p id="clip">${valor}</p>
-            <button id="copiar"><img src="images/image2.png"></button>`;
-            ventana.classList.add('grid');
-            const botonCopiar=document.querySelector("#copiar");
-            botonCopiar.addEventListener('click',copiarTexto);
-        }
-    }else{
+        }else{
+            ventana.innerHTML=`<img src="images/prohibido.webp">
+            <h2>Los valores ingresados no son permitidos</h2>`
+        }     
+    }else if(ventana.innerHTML!=noText){
         ventana.classList.remove('grid');
         ventana.innerHTML=noText;
         ventana.classList.add('mensaje');

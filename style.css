@@ -34,6 +34,7 @@ main{
 }
 .buttons input:hover{
     scale: 1.1;
+    cursor: pointer;
 }
 #textoIngresado{
     font-family: 'Roboto', sans-serif;
@@ -122,6 +123,7 @@ main{
 .grid button:hover{
     background: whitesmoke;
     scale: 1.1;
+    cursor: pointer;
 }
 .grid button:active{
     background: silver;
@@ -130,6 +132,20 @@ main{
     width: 100%;
     height: auto;
     margin: auto;
+}
+textarea+p{
+    margin-left: 4%;
+}
+footer{
+    background: black;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    color: white;
+    font-size: 110%;
 }
 @media screen and (max-width:1000px) {
     main{
